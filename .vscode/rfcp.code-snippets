@@ -1,0 +1,19 @@
+{
+	"React TS Component with Props": {
+		"prefix": "rfcp",
+		"body": [
+			"type Props = {",
+			"  $1",
+			"};",
+			"",
+			"const ${TM_FILENAME_BASE} = ({ $2 }: Props) => {",
+			"  return (",
+			"    <div>$0</div>",
+			"  );",
+			"};",
+			"",
+			"export default ${TM_FILENAME_BASE};"
+		],
+		"description": "React TypeScript component with Props"
+	}
+}
