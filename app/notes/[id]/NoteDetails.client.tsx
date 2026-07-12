@@ -4,6 +4,8 @@ import { getSingleNote } from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 
+import css from "./NoteDetails.module.css"
+
 const NoteDetailsClient = () => {
   const { id } = useParams<{ id: string }>();
   const { data: note, isLoading, error } = useQuery({
@@ -17,10 +19,10 @@ const NoteDetailsClient = () => {
   const formattedDate = note.updatedAt ? `Updated at: ${note.updatedAt}` : `Created at: ${note.createdAt}`;
 
   return (
-    <div>
-      <h2>{ note.title}</h2>
-      <p>{ note.content}</p>
-      <p>{ formattedDate}</p>
+    <div className={css.container}>
+      <h2 className={css.header}>{ note.title}</h2>
+      <p className={css.content}>{ note.content}</p>
+      <p className={ css.date}>{ formattedDate}</p>
     </div>
   );
 };
