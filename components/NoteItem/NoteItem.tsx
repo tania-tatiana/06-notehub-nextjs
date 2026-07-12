@@ -6,7 +6,8 @@ type Props = {
 }
 
 const NoteItem = ({ item}: Props) => {
-    return (<li><Link href={`/notes/${item.id}`}>{item.title}</Link></li>);
+    return (<li><Link href={`/notes/${item.id}`}>{item.title}</Link>
+    <button>Delete</button></li>);
 }
 
 export default NoteItem;

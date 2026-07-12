@@ -6,6 +6,7 @@ export type Note = {
     content: string;
     categoryId: string;
     userId: string;
+    tag: string;
     createdAt: string;
     updatedAt: string;
 }
